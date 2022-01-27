@@ -1,16 +1,17 @@
+
 import * as React from 'react';
-import { Route, Routes, HashRouter as Router } from 'react-router-dom';
-import {Hello,Apple} from './pages';
+import { Route, Routes } from 'react-router-dom';
+import {List,Detail} from './pages';
 
 function App() {
   return (
-    <Router>
+    // <Router>
       <Routes>
-        <Route path="/" element={<Hello />} />
-        <Route path="/hello" element={<Hello />} />
-        <Route path="/apple" element={<Apple />} />
+       <Route path='/list' element={<List />} /> 
+       <Route path='/detail' element={<Detail />} /> 
+       
       </Routes>
-    </Router>
+    // </Router>
   );
 }
 export default App

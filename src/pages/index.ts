@@ -1,8 +1,8 @@
-import Apple from './apple'
-import Hello from './hello'
+import List from './list'
+import Detail from './detail'
 
 
 export {
-    Apple,
-    Hello
+    List,
+    Detail
 }
