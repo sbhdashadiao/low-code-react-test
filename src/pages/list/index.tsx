@@ -1,17 +1,19 @@
-import React,{useEffect} from 'react'
+import React,{useRef} from 'react';
+import DeskTop from './desktop';
+import ComponentType from './componentType';
+import styles from './index.less';
+
+
 
 function List(){
-    // const test=()=>{
-    //     console.log('pppp');
-    // }
-    // useEffect(()=>{
-    //     console.log('apple');
-    //     window.addEventListener('hashchange',test)
-    //     return ()=>window.removeEventListener('hashchange',test)
-    // },[])
+    const desktopRef =useRef<any>(null);
+    const createEle=(props:any)=>{
+        desktopRef.current!.createEle(props)
+    }
     return (
-        <div>
-            hello apple
+        <div className={styles.listContainer}>
+            <DeskTop ref={desktopRef} />
+            <ComponentType createEle={createEle} />
         </div>
     )
 }
