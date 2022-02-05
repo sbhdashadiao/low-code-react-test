@@ -1,12 +1,24 @@
-import React, { ReactElement } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
+import {
+  RecoilRoot,
+} from 'recoil';
 import { HashRouter as Router } from 'react-router-dom';
 import Layout from './pages/layout';
 
-const ele = () => (
-  <Router>
-    <Layout />
-  </Router>);
+
+
+const ele = () => {
+  return (
+    <RecoilRoot>
+      <Router>
+        <Layout />
+      </Router>
+    </RecoilRoot>
+
+  );
+
+}
 
 
 
